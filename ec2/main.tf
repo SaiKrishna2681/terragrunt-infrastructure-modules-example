@@ -13,5 +13,5 @@ terraform {
 
 resource "aws_instance" "thedbadmin_test" {
   ami = var.ami
-  instance_type = var.type
+  instance_type = var.instance_type
 }
