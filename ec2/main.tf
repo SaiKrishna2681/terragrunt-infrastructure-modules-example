@@ -11,6 +11,13 @@ terraform {
   }
 }
 
+provider "aws" {
+  region = var.aws_region
+  assume_role {
+    role_arn = "role_arn = "arn:aws:iam::815242058460:user/terraform""
+  }
+} 
+
 resource "aws_instance" "thedbadmin_test" {
   ami = var.ami
   instance_type = var.instance_type
